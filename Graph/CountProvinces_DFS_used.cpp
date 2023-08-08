@@ -50,14 +50,12 @@ class Solution {
 };
 
 int main() {
-
     vector<vector<int>> adj
     {
         {1, 0, 1},
         {0, 1, 0},
         {1, 0, 1}
     };
-
 
     Solution ob;
     cout << ob.numProvinces(adj) << endl;

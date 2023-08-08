@@ -12,11 +12,15 @@ struct TreeNode {
  };
 
  bool getPath(TreeNode *root, int target, vector<int> &ans ){
-    if(!root) return false;
-    ans.push_back(root->val);
-    if(root->val == target) return true;
+    if(!root)
+        return false;
 
-    if(getPath(root->left, target, ans) || getPath(root->right, target, ans)) return true;
+    ans.push_back(root->val);
+    if(root->val == target)
+        return true;
+
+    if(getPath(root->left, target, ans) || getPath(root->right, target, ans))
+        return true;
 
     ans.pop_back();
     return false;

@@ -8,18 +8,19 @@ int major(vector<int> &v){
 
     for(int i=0; i<v.size(); i++){
         if(cnt == 0){
-            cnt = 1; element = v[i];            /// count 0 mane new element assign ager sb +- kre 0 hoise
+            cnt = 1;
+            element = v[i];            /// count 0 mane new element assign ager sb +- kre 0 hoise
         }
         else if(v[i] == element) cnt++;
         else cnt--;
     }
 
-    int cnt1 = 0;
+    cnt = 0;
 
     for (int i=0; i<v.size(); i++){
-        if(v[i]== element) cnt1++;
+        if(v[i]== element) cnt++;
     }
-    if(cnt1> (v.size() / 2)) return element;
+    if(cnt> (v.size() / 2)) return element;
 
     return -1;
 }

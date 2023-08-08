@@ -19,11 +19,11 @@ void rotatematrix(vector<vector<int>> &mt){
             start++; end--;
         }
     }
-//    for(int i=0;i<n;i++){
-//        for(int j=0;j<n;j++)
-//            cout<<mt[i][j]<<" ";
-//        cout<<endl;
-//    }
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++)
+            cout<<mt[i][j]<<" ";
+        cout<<endl;
+    }
 }
 
 int main(){

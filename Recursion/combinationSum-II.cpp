@@ -20,10 +20,9 @@ void helper(int ind, vector<int>& arr, int target, vector<int>& temp, vector<vec
     }
 
 vector<vector<int>> combinationSum2(vector<int>& arr, int target) {
-    int n = arr.size();
+    sort(arr.begin(), arr.end());
     vector<vector<int>> ans;
     vector<int> temp;
-    sort(arr.begin(), arr.end());
     helper(0, arr, target, temp, ans);
     return ans;
 }
@@ -34,9 +33,9 @@ int main(){
     vector<vector<int>> ans = combinationSum2(arr, target);
 
     for(int i=0; i<ans.size();i++){
-        for(auto it:ans[i]){
+        for(auto it:ans[i])
             cout<<it<<" ";
-        }cout<<endl;
+        cout<<endl;
     }
     return 0;
 }

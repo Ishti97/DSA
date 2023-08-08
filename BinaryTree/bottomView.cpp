@@ -13,7 +13,7 @@ struct TreeNode {
  /// use a queue and a map(key-wise sort)
 vector <int> bottomView(Node *root) {
     vector<int> ans;
-    if(root NULL) return ans;
+    if(root == NULL) return ans;
 
     map<int, int> mpp; // line-val
     queue<pair<Node*, int>> q; // node-line
